@@ -1,0 +1,900 @@
+/* ========================================
+   IGLESIA EL REMANENTE
+   Madison, Wisconsin
+
+   WEBSITE STYLESHEET
+======================================== */
+
+/* ========================================
+   1. COLORS AND VARIABLES
+======================================== */
+
+:root {
+  /* Primary Colors */
+  --primary: #172b4d;
+  --secondary: #29476c;
+
+  /* Gold Accent Colors */
+  --gold: #c9a45c;
+  --gold-light: #e0bd78;
+  --gold-dark: #8c692c;
+
+  /* Background Colors */
+  --background: #faf8f3;
+  --white: #ffffff;
+  --cream: #f5efe2;
+
+  /* Text Colors */
+  --text: #263345;
+  --text-muted: #586579;
+  --text-light: #e5eaf1;
+  --text-white: #ffffff;
+
+  /* Border Colors */
+  --border: #ebe6dc;
+  --border-light: #e8e1d5;
+
+  /* Shadows */
+  --shadow-light: 0 8px 30px rgba(23, 43, 77, 0.04);
+  --shadow-medium: 0 10px 35px rgba(23, 43, 77, 0.08);
+  --shadow-hover: 0 10px 22px rgba(0, 0, 0, 0.13);
+
+  /* Border Radius */
+  --radius-small: 7px;
+  --radius-medium: 12px;
+  --radius-large: 14px;
+
+  /* Transitions */
+  --transition-fast: 0.3s ease;
+  --transition-normal: 0.45s ease;
+  --transition-slow: 1.5s ease;
+
+  /* Layout */
+  --container-width: 1100px;
+  --nav-width: 1240px;
+}
+
+/* ========================================
+   2. GLOBAL RESET
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ========================================
+   3. TYPOGRAPHY
+======================================== */
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5.8vw, 4.6rem);
+  margin: 0 0 22px;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 3.4vw, 2.65rem);
+  margin: 0 0 18px;
+  color: var(--primary);
+}
+
+h3 {
+  color: var(--primary);
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+/* ========================================
+   4. LINKS AND ACCESSIBILITY
+======================================== */
+
+a {
+  color: var(--gold-dark);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* Skip Navigation Link */
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -80px;
+  padding: 10px 15px;
+  background: var(--white);
+  z-index: 999;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* ========================================
+   5. HEADER AND NAVIGATION
+======================================== */
+
+.site-header {
+  background-color: var(--primary);
+  border-bottom: 3px solid var(--gold);
+}
+
+.nav-container {
+  max-width: var(--nav-width);
+  margin: auto;
+  padding: 13px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* Church Logo*/
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+
+  color: var(--white);
+  font-family: Georgia, serif;
+  font-size: 1.18rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* Navigation Links */
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition: color var(--transition-fast);
+}
+
+.nav-links a:hover,
+.brand:hover {
+  color: var(--gold-light);
+}
+
+/* ========================================
+   6. HERO SECTION
+======================================== */
+
+.hero-section {
+  background:
+    linear-gradient(120deg, var(--primary), var(--secondary)),
+    url("/sources/grupo-de-adoracion.jpg") center/cover no-repeat;
+  background-blend-mode: multiply; /* Blends the gradient into the image */
+  color: var(--text-white);
+  text-align: center;
+
+  padding: clamp(80px, 12vw, 250px) 24px;
+}
+
+.hero-inner {
+  max-width: 850px;
+  margin: auto;
+}
+
+/* Small Heading Above Main Title */
+
+.eyebrow {
+  color: var(--gold-dark);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.hero-section .eyebrow {
+  color: var(--gold-light);
+}
+
+/* Hero Description */
+
+.hero-description {
+  color: var(--text-light);
+
+  font-size: clamp(1.05rem, 2vw, 1.22rem);
+
+  max-width: 690px;
+  margin: 0 auto 34px;
+}
+
+/* Hero Buttons Layout */
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   7. BUTTONS
+======================================== */
+
+/* Global Button Styling */
+
+.btn,
+.live-btn,
+.directions-btn,
+button {
+    transition:
+        opacity 2.35s ease-in-out,
+        background-color 0.35s ease-in-out,
+        color 0.35s ease-in-out,
+        box-shadow 0.35s ease-in-out;
+}
+
+/* Main Button Styling */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 48px;
+    padding: 12px 26px;
+
+    border-radius: var(--radius-small);
+    font-weight: 700;
+    text-decoration: none;
+
+    opacity: 1;
+}
+
+/* Global Button Hover */
+
+.btn:hover,
+.live-btn:hover,
+.directions-btn:hover,
+button:hover {
+    opacity: 2.8;
+    box-shadow: var(--shadow-hover);
+}
+
+/* ========================================
+   GOLD BUTTON
+======================================== */
+
+.btn-gold {
+    background-color: var(--gold);
+    color: var(--primary);
+}
+
+.btn-gold:hover {
+    background-color: var(--gold-light);
+    color: var(--primary);
+}
+
+/* ========================================
+   OUTLINE BUTTON
+======================================== */
+
+.btn-outline {
+    border: 1px solid var(--text-light);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+/* ========================================
+   DARK BUTTON
+======================================== */
+
+.btn-dark {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-dark:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .btn,
+    .live-btn,
+    .directions-btn,
+    button {
+        transition: var(--transition-fast);
+    }
+}
+/* ========================================
+   8. GENERAL CONTENT SECTIONS
+======================================== */
+
+.content-section {
+  max-width: var(--container-width);
+  margin: auto;
+  padding: 90px 25px;
+}
+
+/* Section Headings */
+
+.section-heading {
+  text-align: center;
+  max-width: 770px;
+  margin: auto;
+}
+
+/* Decorative Gold Underline */
+
+.section-heading h2::after,
+.live-content h2::after {
+  content: "";
+
+  display: block;
+
+  width: 56px;
+  height: 3px;
+
+  background-color: var(--gold);
+
+  margin: 20px auto;
+  border-radius: 3px;
+}
+
+/* Section Descriptions */
+
+.section-heading > p:not(.eyebrow) {
+  color: var(--text-muted);
+}
+
+/* ========================================
+   9. WORSHIP HOURS
+======================================== */
+
+/* Service Cards Grid */
+
+.services-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+
+  margin: 35px auto 0;
+  max-width: 900px;
+}
+
+/* Individual Service Card */
+
+.service {
+  background-color: var(--white);
+
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--gold);
+
+  border-radius: var(--radius-medium);
+
+  padding: 34px 20px;
+  text-align: center;
+
+  box-shadow: var(--shadow-light);
+
+  transition: transform var(--transition-normal);
+}
+
+/* Service Card Hover */
+
+.service:hover {
+  transform: translateY(-4px);
+}
+
+/* Service Day */
+
+.service h3 {
+  font-size: 1.7rem;
+  margin: 0 0 12px;
+}
+
+/* Service Time */
+
+.service p {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Additional Note */
+
+.section-note {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 24px 0 0;
+}
+
+/* ========================================
+   10. FACEBOOK LIVE SECTION
+======================================== */
+
+.live-section {
+  background-color: var(--primary);
+  color: var(--white);
+
+  padding: 85px 25px;
+  text-align: center;
+}
+
+/* Live Section Content */
+
+.live-content {
+  max-width: 770px;
+  margin: auto;
+}
+
+/* Weekly Broadcast Label */
+
+.live-label {
+  color: var(--gold-light);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+}
+
+/* Facebook Live Heading */
+
+.live-content h2 {
+  color: var(--white);
+  margin-top: 14px;
+}
+
+/* Facebook Live Description */
+
+.live-content > p:not(.live-label) {
+  color: var(--text-light);
+}
+
+/* Facebook Button */
+
+.live-btn {
+  margin-top: 16px;
+}
+
+/* Facebook Live Note */
+
+.live-content .live-note {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin: 18px 0 0;
+}
+
+/* ========================================
+   11. LOCATION AND GOOGLE MAPS
+======================================== */
+
+/* Church Address */
+
+address {
+  font-style: normal;
+  font-size: 1.14rem;
+  line-height: 1.8;
+
+  margin: 0 0 25px;
+}
+
+/* Google Maps Container */
+
+.map-container {
+  margin: 35px auto 0;
+  max-width: 950px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-large);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow-medium);
+}
+
+/* Embedded Google Map */
+
+.map-container iframe {
+  display: block;
+
+  width: 100%;
+  height: 410px;
+
+  border: 0;
+}
+
+/* ========================================
+   12. PASTORS SECTION
+======================================== */
+
+.pastors-section {
+  border-top: 1px solid var(--border-light);
+}
+
+/* Pastor Information Card */
+
+.pastor-card {
+  max-width: 760px;
+  margin: 35px auto 0;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  background-color: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-large);
+
+  padding: 28px;
+}
+
+/* Pastor Image Placeholder */
+
+.pastor-placeholder {
+  flex: 0 0 125px;
+
+  width: 125px;
+  height: 125px;
+
+  border-radius: var(--radius-medium);
+
+  background-color: var(--cream);
+  color: var(--gold-dark);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 3rem;
+}
+
+/* Pastor Name */
+
+.pastor-card h3 {
+  margin: 0 0 8px;
+}
+
+/* Pastor Description */
+
+.pastor-card p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ========================================
+   13. CONTACT SECTION
+======================================== */
+
+.contact-section {
+  border-top: 1px solid var(--border-light);
+}
+
+/* Email Address */
+
+.contact-email {
+  margin: 18px 0 0;
+  overflow-wrap: anywhere;
+}
+/* ========================================
+   CONTACT DIRECTORY
+======================================== */
+
+/* Main Contact Area */
+
+.contact-main {
+    text-align: center;
+    margin: 35px auto 60px;
+}
+
+.contact-email {
+    margin-top: 18px;
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+.contact-email a {
+    color: var(--gold-dark);
+    text-decoration: none;
+
+    transition: color var(--transition-fast);
+}
+
+.contact-email a:hover {
+    color: var(--primary);
+}
+
+
+/* ========================================
+   ADDITIONAL CONTACTS
+======================================== */
+
+.additional-contacts {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.additional-contacts h3 {
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+}
+
+.additional-contacts > p {
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   CONTACT CARDS GRID
+======================================== */
+
+.contacts-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+    margin-top: 30px;
+}
+
+
+/* Individual Contact Card */
+
+.contact-card {
+    background-color: var(--white);
+
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--gold);
+
+    border-radius: var(--radius-medium);
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow-light);
+
+    transition:
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Contact Card Hover */
+
+.contact-card:hover {
+    background-color: var(--cream);
+    box-shadow: var(--shadow-medium);
+}
+
+
+/* Contact Name */
+
+.contact-card h4 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    color: var(--primary);
+
+    margin: 0 0 15px;
+}
+
+
+/* Phone Number */
+
+.contact-card a {
+    display: inline-block;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    color: var(--gold-dark);
+
+    text-decoration: none;
+
+    transition:
+        opacity 0.35s ease,
+        color 0.35s ease;
+}
+
+
+/* Phone Number Hover */
+
+.contact-card a:hover {
+    color: var(--primary);
+    opacity: 0.75;
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVENESS
+======================================== */
+
+@media (max-width: 600px) {
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .contact-card {
+        padding: 28px 20px;
+    }
+
+    .additional-contacts h3 {
+        font-size: 1.5rem;
+    }
+
+}
+
+/* ========================================
+   14. FOOTER
+======================================== */
+
+.site-footer {
+  background-color: var(--primary);
+  color: var(--text-light);
+
+  padding: 42px 20px;
+
+  text-align: center;
+
+  border-top: 4px solid var(--gold);
+}
+
+.site-footer p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   15. TABLET RESPONSIVENESS
+   Screens Smaller Than 800px
+======================================== */
+
+@media (max-width: 800px) {
+  /* Navigation */
+
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 12px 20px;
+  }
+
+  /* Content */
+
+  .content-section {
+    padding: 65px 20px;
+  }
+}
+
+/* ========================================
+   16. MOBILE RESPONSIVENESS
+   Screens Smaller Than 600px
+======================================== */
+
+@media (max-width: 600px) {
+  /* Logo */
+
+  .brand {
+    font-size: 1.05rem;
+  }
+
+  /* Navigation */
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  /* Hero Section */
+
+  .hero-section {
+    padding: 75px 20px;
+  }
+
+  /* Worship Hours */
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Google Maps */
+
+  .map-container iframe {
+    height: 310px;
+  }
+
+  /* Pastors Section */
+
+  .pastor-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Hero Buttons */
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* ========================================
+   17. ACCESSIBILITY
+   Reduced Motion Preferences
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
