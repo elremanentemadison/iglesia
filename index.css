@@ -209,8 +209,8 @@ a:focus-visible {
 
 .hero-section {
   background:
-    linear-gradient(120deg, var(--primary), var(--secondary)),
-    url("/sources/grupo-de-adoracion.jpg") center/cover no-repeat;
+  linear-gradient(120deg, var(--primary), var(--secondary)),
+  url("sources/grupo-de-adoracion.jpg") center/cover no-repeat;
   background-blend-mode: multiply; /* Blends the gradient into the image */
   color: var(--text-white);
   text-align: center;
