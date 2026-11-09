@@ -1,0 +1,862 @@
+/* ==========================================================================
+   IGLESIA EL REMANENTE — Madison, Wisconsin
+   Hoja de Estilos Principal (index.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES & DESIGN TOKENS
+   -------------------------------------------------------------------------- */
+:root {
+  /* Paleta Primaria */
+  --primary: #172b4d;
+  --secondary: #29476c;
+
+  /* Acentos Dorados */
+  --gold: #c9a45c;
+  --gold-light: #e0bd78;
+  --gold-dark: #8c692c;
+
+  /* Fondos */
+  --background: #faf8f3;
+  --white: #ffffff;
+  --cream: #f5efe2;
+
+  /* Tipografía & Colores de Texto */
+  --text: #263345;
+  --text-muted: #586579;
+  --text-light: #e5eaf1;
+  --text-white: #ffffff;
+
+  /* Bordes */
+  --border: #ebe6dc;
+  --border-light: #e8e1d5;
+
+  /* Sombras */
+  --shadow-light: 0 8px 30px rgba(23, 43, 77, 0.04);
+  --shadow-medium: 0 10px 35px rgba(23, 43, 77, 0.08);
+  --shadow-hover: 0 10px 22px rgba(0, 0, 0, 0.13);
+
+  /* Radios */
+  --radius-small: 7px;
+  --radius-medium: 12px;
+  --radius-large: 14px;
+
+  /* Transiciones */
+  --transition-fast: 0.25s ease;
+  --transition-normal: 0.35s ease;
+
+  /* Dimensiones de Contenedores */
+  --container-width: 1100px;
+  --nav-width: 1240px;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET & BASE
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   3. TIPOGRAFÍA
+   -------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+  color: var(--primary);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 5.5vw, 4.4rem);
+  color: var(--text-white);
+  margin-bottom: 22px;
+}
+
+h2 {
+  font-size: clamp(1.85rem, 3.2vw, 2.65rem);
+  margin-bottom: 18px;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+/* --------------------------------------------------------------------------
+   4. ENLACES & ACCESIBILIDAD
+   -------------------------------------------------------------------------- */
+a {
+  color: var(--gold-dark);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -80px;
+  padding: 10px 16px;
+  background: var(--white);
+  color: var(--primary);
+  font-weight: 700;
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-medium);
+  z-index: 1000;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   5. CABECERA & NAVEGACIÓN
+   -------------------------------------------------------------------------- */
+.site-header {
+  background-color: var(--primary);
+  border-bottom: 3px solid var(--gold);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: var(--nav-width);
+  margin: 0 auto;
+  padding: 13px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--white);
+  font-family: Georgia, serif;
+  font-size: 1.18rem;
+  font-weight: bold;
+}
+
+.brand img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 164, 92, 0.4);
+}
+
+.brand:hover {
+  color: var(--gold-light);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--text-white);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 4px 0;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold-light);
+}
+
+/* --------------------------------------------------------------------------
+   6. SECCIÓN HERO
+   -------------------------------------------------------------------------- */
+.hero-section {
+  background:
+    linear-gradient(120deg, rgba(23, 43, 77, 0.92), rgba(41, 71, 108, 0.88)),
+    url("sources/grupo-de-adoracion.jpg") center/cover no-repeat;
+  color: var(--text-white);
+  text-align: center;
+  padding: clamp(80px, 12vw, 210px) 24px;
+}
+
+.hero-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: var(--gold-dark);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero-section .eyebrow {
+  color: var(--gold-light);
+}
+
+/* Caja de Cita Semanal en Hero */
+.weekly-quote {
+  max-width: 680px;
+  margin: 0 auto 34px;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-small);
+  backdrop-filter: blur(4px);
+}
+
+.quote-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.quote-text {
+  font-family: Georgia, serif;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-style: italic;
+  color: var(--text-light);
+  margin: 0 0 6px;
+  line-height: 1.5;
+}
+
+.quote-ref {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   7. BOTONES
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 26px;
+  border-radius: var(--radius-small);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.btn:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.btn-gold {
+  background-color: var(--gold);
+  color: var(--primary);
+}
+
+.btn-gold:hover {
+  background-color: var(--gold-light);
+  color: var(--primary);
+}
+
+.btn-outline {
+  border-color: var(--text-light);
+  color: var(--white);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+.btn-dark {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-dark:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+/* --------------------------------------------------------------------------
+   8. SECCIONES DE CONTENIDO
+   -------------------------------------------------------------------------- */
+.content-section {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 90px 25px;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.section-heading h2::after,
+.live-content h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  background-color: var(--gold);
+  margin: 20px auto;
+  border-radius: 3px;
+}
+
+.section-heading > p:not(.eyebrow) {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. HORARIOS DE ADORACIÓN
+   -------------------------------------------------------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 35px auto 0;
+  max-width: 900px;
+}
+
+.service {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--gold);
+  border-radius: var(--radius-medium);
+  padding: 34px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.service:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.service h3 {
+  font-size: 1.7rem;
+  margin: 0 0 12px;
+}
+
+.service p {
+  font-size: 1.15rem;
+  margin: 0;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.section-note {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 24px 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   10. TRANSMISIONES EN VIVO (FACEBOOK)
+   -------------------------------------------------------------------------- */
+.live-section {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 85px 25px;
+  text-align: center;
+}
+
+.live-content {
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.live-label {
+  color: var(--gold-light);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+}
+
+.live-content h2 {
+  color: var(--white);
+  margin-top: 14px;
+}
+
+.live-content > p:not(.live-label) {
+  color: var(--text-light);
+}
+
+/* Contenedor Responsivo para Video */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin: 28px auto 22px;
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.live-btn {
+  margin-top: 10px;
+}
+
+.live-note {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin: 18px 0 0;
+  opacity: 0.9;
+}
+
+/* --------------------------------------------------------------------------
+   11. UBICACIÓN Y MAPA
+   -------------------------------------------------------------------------- */
+address {
+  font-style: normal;
+  font-size: 1.14rem;
+  line-height: 1.8;
+  margin: 0 0 25px;
+}
+
+.map-container {
+  margin: 35px auto 0;
+  max-width: 950px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  height: 410px;
+  border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   12. PASTORES
+   -------------------------------------------------------------------------- */
+.pastors-section {
+  border-top: 1px solid var(--border-light);
+}
+
+.pastor-card {
+  max-width: 760px;
+  margin: 35px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-large);
+  padding: 28px;
+  box-shadow: var(--shadow-light);
+}
+
+.pastor-placeholder {
+  flex: 0 0 120px;
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-medium);
+  background-color: var(--cream);
+  color: var(--gold-dark);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--border);
+}
+
+.pastor-card h3 {
+  margin: 0 0 8px;
+}
+
+.pastor-card p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   13. CONTACTO & DIRECTORIO
+   -------------------------------------------------------------------------- */
+.contact-section {
+  border-top: 1px solid var(--border-light);
+}
+
+.contact-main {
+  text-align: center;
+  margin: 35px auto 55px;
+}
+
+.contact-email {
+  margin-top: 14px;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+}
+
+.contact-email a {
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.additional-contacts {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.additional-contacts h3 {
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+}
+
+.additional-contacts > p {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.contact-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--gold);
+  border-radius: var(--radius-medium);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.contact-card:hover {
+  background-color: var(--cream);
+  box-shadow: var(--shadow-medium);
+}
+
+.contact-card h4 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.contact-card a {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+}
+
+/* --------------------------------------------------------------------------
+   14. GALERÍA DE FOTOS (GALERIA.HTML & PREVIEW)
+   Efecto Blanco y Negro en Desktop -> A todo color con hover
+   Espacio de margen mínimo entre imágenes
+   -------------------------------------------------------------------------- */
+.gallery-section {
+  border-top: 1px solid var(--border-light);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 8px; /* Margen mínimo entre fotos */
+  margin: 40px auto 0;
+  max-width: var(--container-width);
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-small);
+  background-color: var(--cream);
+  aspect-ratio: 4 / 3;
+  margin: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Blanco y negro por defecto en desktop */
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition:
+    filter 0.45s ease,
+    transform 0.45s ease;
+}
+
+/* Al pasar el cursor, cobra vida a todo color */
+.gallery-item:hover img,
+.gallery-item:focus-within img {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 14px;
+  background: linear-gradient(to top, rgba(23, 43, 77, 0.85), transparent);
+  color: var(--white);
+  font-size: 0.88rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  pointer-events: none;
+}
+
+.gallery-item:hover .gallery-caption,
+.gallery-item:focus-within .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-cta {
+  text-align: center;
+  margin-top: 35px;
+}
+/* ==========================================================================
+   CABECERA AZUL CON IMAGEN DE FONDO (GALERÍA)
+   ========================================================================== */
+.gallery-hero {
+  background:
+    linear-gradient(120deg, rgba(23, 43, 77, 0.92), rgba(41, 71, 108, 0.88)),
+    url("sources/grupo-de-adoracion.jpg") center/cover no-repeat;
+  color: var(--text-white);
+  text-align: center;
+  padding: clamp(60px, 9vw, 110px) 24px;
+  border-bottom: 3px solid var(--gold);
+}
+
+.gallery-hero .section-heading {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-hero .eyebrow {
+  color: var(--gold-light);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.gallery-hero h1 {
+  color: var(--white);
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  margin-bottom: 16px;
+}
+
+/* Línea decorativa dorada */
+.gallery-hero h1::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  background-color: var(--gold);
+  margin: 18px auto;
+  border-radius: 3px;
+}
+
+.gallery-hero p:not(.eyebrow) {
+  color: var(--text-light);
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   15. PIE DE PÁGINA (FOOTER)
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 42px 20px;
+  text-align: center;
+  border-top: 4px solid var(--gold);
+}
+
+.site-footer p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.site-footer strong {
+  color: var(--white);
+  font-size: 1.05rem;
+}
+
+/* --------------------------------------------------------------------------
+   16. RESPONSIVE DESIGN (MEDIA QUERIES)
+   -------------------------------------------------------------------------- */
+
+/* Tablets & Pantallas medianas (< 800px) */
+@media (max-width: 800px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .content-section {
+    padding: 65px 20px;
+  }
+}
+
+/* Móviles (< 600px) */
+@media (max-width: 600px) {
+  .brand {
+    font-size: 1.05rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .hero-section {
+    padding: 70px 18px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .services-grid,
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+
+  .pastor-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Galería en Móvil: mantener el margen mínimo y toque responsivo */
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .gallery-item {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* En dispositivos táctiles sin puntero (hover: none), las imágenes pueden verse en color */
+@media (hover: none) {
+  .gallery-item img {
+    filter: grayscale(0%);
+  }
+
+  .gallery-caption {
+    opacity: 1;
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(23, 43, 77, 0.75), transparent);
+    font-size: 0.78rem;
+    padding: 8px 10px;
+  }
+}
+
+/* Accesibilidad: Reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
