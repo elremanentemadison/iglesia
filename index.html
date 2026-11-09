@@ -6,45 +6,40 @@
     <title>Iglesia El Remanente | Iglesia Cristiana en Madison, WI</title>
     <meta
       name="description"
-      content="Bienvenidos a Iglesia El Remanente, una iglesia cristiana evangélica en Madison, Wisconsin. Cultos jueves 6 PM y domingos 1 PM. ¡Visítanos!"
-    />
-    <meta
-      name="description"
       content="Bienvenidos a Iglesia El Remanente en Madison, Wisconsin. Cultos los jueves de 6:00 a 9:00 PM y domingos de 1:00 a 4:30 PM. Visítanos en 5701 Raymond Rd."
     />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#172b4d" />
+    <link rel="canonical" href="https://iglesiaevangelicaelremanentemadison.com/" />
+
+    <!-- Open Graph / Redes Sociales (WhatsApp, Facebook, iMessage) -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_US" />
-    <meta
-      property="og:title"
-      content="Iglesia El Remanente | Madison, Wisconsin"
-    />
+    <meta property="og:url" content="https://iglesiaevangelicaelremanentemadison.com/" />
+    <meta property="og:title" content="Iglesia El Remanente | Madison, Wisconsin" />
     <meta
       property="og:description"
       content="Te esperamos en Iglesia El Remanente. Jueves y domingos en 5701 Raymond Rd, Madison, WI."
     />
     <meta property="og:site_name" content="Iglesia El Remanente" />
-    <!-- Add canonical and og:url after you have your final public website address. -->
+    <meta property="og:image" content="https://iglesiaevangelicaelremanentemadison.com/sources/grupo-de-adoracion.jpg" />
+
     <link rel="icon" type="image/png" href="sources/favicon.png" />
     <link rel="stylesheet" href="index.css" />
-    <!--//come back-->
-    <!-- SEO: Iglesia El Remanente -->
+
+    <!-- Schema.org SEO Datos Estructurados -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Church",
-
         "name": "Iglesia El Remanente",
-
+        "url": "https://iglesiaevangelicaelremanentemadison.com",
         "alternateName": [
           "El Remanente",
           "El Remanente Madison",
           "Iglesia Cristiana El Remanente"
         ],
-
         "description": "Iglesia El Remanente es una iglesia cristiana evangélica ubicada en Madison, Wisconsin. Nuestra congregación se reúne los jueves y domingos para compartir la Palabra de Dios, la oración, la adoración y la fe en Jesucristo. Visítanos en 5701 Raymond Rd, Madison, WI 53711.",
-
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "5701 Raymond Rd",
@@ -53,13 +48,9 @@
           "postalCode": "53711",
           "addressCountry": "US"
         },
-
         "email": "iglesiaremanente4@gmail.com",
-
         "hasMap": "https://www.google.com/maps/search/?api=1&query=5701+Raymond+Rd+Madison+WI+53711",
-
         "publicAccess": true,
-
         "areaServed": {
           "@type": "City",
           "name": "Madison",
@@ -68,7 +59,6 @@
             "name": "Wisconsin"
           }
         },
-
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -88,14 +78,15 @@
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
     <header class="site-header">
       <nav class="nav-container" aria-label="Navegación principal">
-        <a class="brand" href="#inicio">
+        <a class="brand" href="index.html">
           <img
             src="sources/El Remanente_ Emblema Dorado de Oración.png"
-            width="54"
-            height="54"
-            alt="Iglesia El Remanente"
+            width="50"
+            height="50"
+            alt="Emblema de Iglesia El Remanente"
           />
           <span>Iglesia El Remanente</span>
         </a>
@@ -103,24 +94,29 @@
           <a href="#horarios">Horarios</a>
           <a href="#transmisiones">En vivo</a>
           <a href="#ubicacion">Ubicación</a>
+          <a href="galeria.html">Galería</a>
           <a href="#pastores">Pastores</a>
-          <a href="#contacto">Contactos</a>
+          <a href="#contacto">Contacto</a>
         </div>
       </nav>
     </header>
 
     <main id="contenido">
-      <section
-        id="inicio"
-        class="hero-section"
-        aria-labelledby="titulo-principal"
-      >
+      <!-- Sección Hero Principal -->
+      <section id="inicio" class="hero-section" aria-labelledby="titulo-principal">
         <div class="hero-inner">
-          <p class="eyebrow">MADISON, WISCONSIN</p>
+          <p class="eyebrow">Madison, Wisconsin</p>
           <h1 id="titulo-principal">Bienvenidos a Iglesia El Remanente</h1>
-          <p class="hero-description">
-            <i></i>
-          </p>
+
+          <!-- Generador Automático de Cita Bíblica Semanal -->
+          <div class="weekly-quote" aria-live="polite">
+            <span class="quote-label">Versículo de la Semana</span>
+            <p id="quote-text" class="quote-text">
+              "Porque donde están dos o tres congregados en mi nombre, allí estoy yo en medio de ellos."
+            </p>
+            <span id="quote-ref" class="quote-ref">— Mateo 18:20</span>
+          </div>
+
           <div class="hero-actions">
             <a class="btn btn-gold" href="#horarios">Horarios de adoración</a>
             <a class="btn btn-outline" href="#ubicacion">Cómo llegar</a>
@@ -128,82 +124,85 @@
         </div>
       </section>
 
-      <section
-        id="horarios"
-        class="content-section worship-hours"
-        aria-labelledby="titulo-horarios"
-      >
+      <!-- Horarios de Culto -->
+      <section id="horarios" class="content-section worship-hours" aria-labelledby="titulo-horarios">
         <div class="section-heading">
-          <p class="eyebrow">REÚNETE CON NOSOTROS</p>
+          <p class="eyebrow">Reúnete con nosotros</p>
           <h2 id="titulo-horarios">Horarios de Adoración</h2>
-          <p>¡Te esperamos con los brazos abiertos!</p>
+          <p>¡Te esperamos con los brazos abiertos para alabar a Dios juntos!</p>
         </div>
+
         <div class="services-grid">
           <article class="service">
             <h3>Jueves</h3>
             <p>
-              <time datetime="18:00">6:00 PM</time> –
-              <time datetime="21:00">9:00 PM</time>
+              <time datetime="18:00">6:00 PM</time> – <time datetime="21:00">9:00 PM</time>
             </p>
           </article>
           <article class="service">
             <h3>Domingos</h3>
             <p>
-              <time datetime="13:00">1:00 PM</time> –
-              <time datetime="16:30">4:30 PM</time>
+              <time datetime="13:00">1:00 PM</time> – <time datetime="16:30">4:30 PM</time>
             </p>
           </article>
         </div>
-        <p class="section-note">
-          Horarios de culto · Hora local de Madison, Wisconsin
-        </p>
+
+        <p class="section-note">Horarios de culto · Hora local de Madison, Wisconsin (CST)</p>
       </section>
 
-      <section
-        id="transmisiones"
-        class="live-section"
-        aria-labelledby="titulo-vivo"
-      >
+      <!-- Transmisiones Facebook Live -->
+      <section id="transmisiones" class="live-section" aria-labelledby="titulo-vivo">
         <div class="live-content">
-          <p class="live-label">TRANSMISIONES SEMANALES</p>
+          <p class="live-label">Transmisiones Semanales</p>
           <h2 id="titulo-vivo">Escucha la Palabra de Dios</h2>
           <p>
-            Acompáñanos en nuestras transmisiones semanales por Facebook Live.
-            Comparte con nosotros un tiempo de adoración, oración y enseñanza de
-            la Palabra de Dios.
+            Acompáñanos en nuestras transmisiones semanales por Facebook Live. Comparte con nosotros un
+            tiempo de adoración, oración y enseñanza de las Sagradas Escrituras.
           </p>
-          <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61572179893573%2Fvideos%2F1670180898118244%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+
+          <div class="video-wrapper">
+            <iframe
+              title="Transmisión en vivo de Iglesia El Remanente"
+              src="https://www.facebook.com/plugins/video.php?height=314&amp;href=https%3A%2F%2Fwww.facebook.com%2F61572179893573%2Fvideos%2F1670180898118244%2F&amp;show_text=false&amp;width=560&amp;t=0"
+              scrolling="no"
+              allowfullscreen
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+
           <a
             class="btn btn-gold live-btn"
             href="https://www.facebook.com/profile.php?id=61572179893573"
             target="_blank"
             rel="noopener noreferrer"
-            >Ver transmisiones en Facebook</a
           >
+            Ver transmisiones en Facebook
+          </a>
           <p class="live-note">
-            Este enlace abre un video compartido. Para ver futuras
-            transmisiones, visita nuestra página de Facebook.
+            Para ver nuestras últimas predicaciones y transmisiones en vivo, visita nuestra página oficial de Facebook.
           </p>
         </div>
       </section>
 
-      <section
-        id="ubicacion"
-        class="content-section location-section"
-        aria-labelledby="titulo-ubicacion"
-      >
+      <!-- Ubicación y Mapa -->
+      <section id="ubicacion" class="content-section location-section" aria-labelledby="titulo-ubicacion">
         <div class="section-heading">
-          <p class="eyebrow">VEN A VISITARNOS</p>
-          <h2 id="titulo-ubicacion">Visita Nuestra Iglesia en Madison</h2>
-          <address>5701 Raymond Rd<br />Madison, WI 53711</address>
+          <p class="eyebrow">Ven a visitarnos</p>
+          <h2 id="titulo-ubicacion">Nuestra Ubicación en Madison</h2>
+          <address>
+            5701 Raymond Rd<br />
+            Madison, WI 53711
+          </address>
           <a
             class="btn btn-dark directions-btn"
             href="https://www.google.com/maps/dir/?api=1&amp;destination=5701+Raymond+Rd+Madison+WI+53711"
             target="_blank"
             rel="noopener noreferrer"
-            >Cómo llegar</a
           >
+            Cómo llegar con Google Maps
+          </a>
         </div>
+
         <div class="map-container">
           <iframe
             title="Mapa de Iglesia El Remanente en 5701 Raymond Rd, Madison, Wisconsin"
@@ -215,100 +214,134 @@
         </div>
       </section>
 
-      <!--Photo section-->
-      <section></section>
-
-      <section
-        id="pastores"
-        class="content-section pastors-section"
-        aria-labelledby="titulo-pastores"
-      >
+      <!-- Galería Preview -->
+      <section class="content-section gallery-section" aria-labelledby="titulo-galeria">
         <div class="section-heading">
-          <p class="eyebrow">NUESTRA COMUNIDAD</p>
-          <h2 id="titulo-pastores">Conoce a Nuestros Pastores</h2>
-          <p>Conoce a quienes acompañan y sirven a nuestra congregación</p>
+          <p class="eyebrow">Momentos de Fe y Comunidad</p>
+          <h2 id="titulo-galeria">Galería de Fotos</h2>
+          <p>
+            Un vistazo a nuestra congregación, alabanza y eventos especiales.
+          </p>
         </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img
+              src="sources/ResourcesImages2/IMG_1267.jpg"
+              alt="Grupo de Adoración en Iglesia El Remanente"
+              loading="lazy"
+            />
+            <figcaption class="gallery-caption">Alabanza y Adoración</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="sources/ResourcesImages2/IMG_1257.jpg"
+              alt="Reunión de la congregación"
+              onerror="this.src='sources/grupo-de-adoracion.jpg'"
+              loading="lazy"
+            />
+            <figcaption class="gallery-caption">Comunión Fraternal</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="sources/galeria/foto-2.jpg"
+              alt="Tiempo de oración"
+              onerror="this.src='sources/grupo-de-adoracion.jpg'"
+              loading="lazy"
+            />
+            <figcaption class="gallery-caption">Oración y Fe</figcaption>
+          </figure>
+        </div>
+
+        <div class="gallery-cta">
+          <a class="btn btn-dark" href="galeria.html">Ver galería completa</a>
+        </div>
+      </section>
+
+      <!-- Pastores -->
+      <section id="pastores" class="content-section pastors-section" aria-labelledby="titulo-pastores">
+        <div class="section-heading">
+          <p class="eyebrow">Nuestra Comunidad</p>
+          <h2 id="titulo-pastores">Conoce a Nuestros Pastores</h2>
+          <p>Líderes que acompañan, oran y sirven a nuestra congregación con amor pastoral.</p>
+        </div>
+
         <div class="pastor-card">
+          
           <div class="pastor-placeholder" aria-hidden="true">FOTO</div>
           <div>
-            <h3>Nuestros pastores y hermanos</h3>
+            <h3>Nuestros pastores y líderes</h3>
             <p>
-              (Anadir informacion de pastores)
+              Guiando al pueblo de Dios en la verdad bíblica, con dedicación y compromiso espiritual
+              para toda la comunidad hispana en Madison y alrededores.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="contact-section content-section" id="contacto">
+      <!-- Contacto -->
+      <section id="contacto" class="content-section contact-section" aria-labelledby="titulo-contacto">
         <div class="section-heading">
-          <p class="eyebrow">ESTAMOS PARA SERVIRTE</p>
-
-          <h2>Contáctanos</h2>
-
+          <p class="eyebrow">Estamos para servirte</p>
+          <h2 id="titulo-contacto">Contáctanos</h2>
           <p>
-            Tienes alguna pregunta o necesitas más información? Estamos aquí
-            para ayudar!
+            ¿Tienes alguna pregunta, petición de oración o necesitas más información? ¡Estamos aquí para apoyarte!
           </p>
         </div>
 
-        <!-- Email Contact -->
+        <!-- Contacto Principal (Correo) -->
         <div class="contact-main">
           <a class="btn btn-dark" href="mailto:iglesiaremanente4@gmail.com">
             Envíanos un correo
           </a>
-
           <p class="contact-email">
-            <a href="mailto:iglesiaremanente4@gmail.com">
-            
-            </a>
+            <a href="mailto:iglesiaremanente4@gmail.com">iglesiaremanente4@gmail.com</a>
           </p>
         </div>
 
-        <!-- Additional Contacts -->
+        <!-- Contactos Directos -->
         <div class="additional-contacts">
-          <h3>Contactos adicionales</h3>
-
+          <h3>Contactos directos</h3>
           <p>
-            También puedes comunicarte directamente con los siguientes miembros
-            de nuestra iglesia.
+            Puedes comunicarte por llamada o mensaje con los hermanos servidores de nuestra iglesia:
           </p>
 
           <div class="contacts-grid">
-            <!-- Mixsael Gamez -->
             <div class="contact-card">
-              <h4>Anadir contacto aqui</h4>
-
-              <a href="tel:+16082357507"> (608) 000-0000 </a>
+              <h4>Pastor Mixsael Gámez</h4>
+              <a href="tel:+16082357507">(608) 235-7507</a>
             </div>
 
-            <!-- Nelsy Gamez -->
             <div class="contact-card">
-              <h4>Anadir contacto aqui</h4>
-
-              <a href="tel:+16082179331"> (608) 000-0000 </a>
+              <h4>Pastora Nelsy Gámez</h4>
+              <a href="tel:+16082179331">(608) 217-9331</a>
             </div>
 
-            <!-- Hermano Naum -->
             <div class="contact-card">
-              <h4>Anadir contacto aqui</h4>
-
-              <a href="tel:+16082357507"> (608) 000-0000 </a>
+              <h4>Hermano Nahum Rodriguez</h4>
+              <a href="tel:+16082357507">(608) 235-7507</a>
             </div>
 
-            <!-- Eric Martinez -->
             <div class="contact-card">
-              <h4>Anadir contacto aqui</h4>
-
-              <a href="tel:+16089605760"> (608) 000-0000</a>
+              <h4>Hermano Eric Martínez</h4>
+              <a href="tel:+16089605760">(608) 960-5760</a>
+            </div>
+            <div class="contact-card">
+              <h4>Hermano Juan Alcantara</h4>
+              <a href="tel:+16089605760">(608) 622-0787</a>
             </div>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <p><strong>Iglesia El Remanente</strong></p>
       <p>5701 Raymond Rd · Madison, WI 53711</p>
-      <p>&copy; 2026 Iglesia El Remanente</p>
+      <p>&copy; 2026 Iglesia El Remanente. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Script de Cita Bíblica Semanal -->
+    <script src="js/quotes.js" defer></script>
   </body>
 </html>
