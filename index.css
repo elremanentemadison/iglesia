@@ -699,7 +699,7 @@ address {
 .gallery-hero {
   background:
     linear-gradient(120deg, rgba(23, 43, 77, 0.92), rgba(41, 71, 108, 0.88)),
-    url("sources/grupo-de-adoracion.jpg") center/cover no-repeat;
+    url("/sources/ResourcesImages2/Main.jpg") center/cover no-repeat;
   color: var(--text-white);
   text-align: center;
   padding: clamp(60px, 9vw, 110px) 24px;
